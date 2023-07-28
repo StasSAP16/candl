@@ -39,6 +39,7 @@ button{
 }
 
 .title{
+    font-family: 'Yeseva One', cursive;
     font-weight: 400;
     margin-bottom: 15px;
     font-size: 40px;
@@ -269,6 +270,49 @@ button{
     font-size: 12px;
 }
 
+.steps__title{
+    font-size: 39px;
+}
+
+.steps__list{
+    gap: 70px 25px;
+    counter-reset: number;
+}
+
+.steps__item{
+    display: flex;
+    gap: 40px;
+    list-style-type: none;
+    position: relative;
+}
+
+.steps__item::before{
+    counter-increment: number;
+    content: '0' counter(number);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 30px;
+    color: #BEA495;
+    font-family: 'Yeseva One', cursive;
+}
+
+/* убираем косяк с 10 номером "010" */
+.steps__item:nth-child(n+10):before{
+    content: counter(number);
+}
+/* переставляем у нечетных номера в право */
+.steps__item.steps__item--even::before{
+    left: auto;
+    right: 0;
+}
+
+.steps__item-text{
+    flex-basis: 174px;
+    /* резервируем место для номера в случае если будет много текста */
+    padding-bottom: 40px;
+}
+
 
 
 
@@ -296,6 +340,18 @@ button{
 .footer__socil{
     display: flex;
     gap: 15px;
+}
+
+@media(max-width: 1074px){
+    .steps__list {
+        gap: 37px 35px;
+    }
+    .steps__item{
+        gap: 0 30px;
+    }
+    .steps__item-img{
+        width: 129px;
+    }
 }
 
 @media(max-width: 1000px){
@@ -332,9 +388,12 @@ button{
     .section__text{
         font-size: 10px;
     }
+    .steps__list {
+        gap: 37px 35px;
+    }
 }
 
-@media(max-width: 900px){
+@media(max-width: 940px){
     .footer__inner{
         flex-wrap: wrap;
     }
@@ -351,6 +410,25 @@ button{
     }
     .products__content {
         gap: 30px 16px;
+    }
+    .steps__list {
+        gap: 25px 35px;
+    }
+    .steps__item {
+        gap: 0 20px;
+    }
+    .steps__item-img{
+        width: 85px;
+        object-fit: cover;
+    }
+    .steps__title {
+        font-size: 15px;
+    }
+    .steps__item-text{
+        font-size: 8px;
+    }
+    .steps__item::before{
+        font-size: 20px;
     }
 }
 
@@ -560,6 +638,24 @@ button{
     .section__descr{
         margin: 0 auto 30px;
         width: 300px;
+    }
+    .steps__list {
+        gap: 25px 40px;
+    }
+}
+
+@media(max-width: 420px){
+    .steps__list {
+        gap: 20px 25px;
+    }
+    .steps__item {
+        gap: 0 16px;
+    }
+    .steps__item-img {
+        width: 66px;
+    }
+    .steps__item-text {
+        font-size: 6px;
     }
 }
 
