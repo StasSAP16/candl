@@ -461,6 +461,27 @@ button{
 }
 /* падинация/дотсы */
 
+/* слайдер 2 */
+.sertificates__slider{
+    width: 1135px;
+    overflow: hidden;
+}
+
+/* слайдер 2 */
+
+.sertificates__descr{
+    margin-right: 20px;
+}
+
+.sertificates__content{
+    padding-bottom: 114px;
+}
+
+.sertificates__content .swiper-pagination{
+    bottom: 60px;
+    text-align: left;
+}
+
 .footer{
     padding-top: 40px;
     padding-bottom: 35px;
@@ -485,6 +506,18 @@ button{
 .footer__socil{
     display: flex;
     gap: 15px;
+}
+
+@media(max-width: 1140px){
+    .feedback__slider{
+        width: 690px;
+    }
+    .sertificates__content img{
+        width: 280px;
+    }
+    .sertificates__slider{
+        width: 880px;
+    }
 }
 
 @media(max-width: 1074px){
@@ -536,6 +569,9 @@ button{
     .steps__title {
         font-size: 37px;
     }
+    .feedback__inner{
+        grid-template-columns: 260px auto;
+    }
 }
 
 @media(max-width: 1000px){
@@ -545,6 +581,9 @@ button{
     }
     .team{
         padding: 50px 0;
+    }
+    .sertificates__content .swiper-pagination {
+        text-align: center;
     }
 }
 
@@ -562,7 +601,7 @@ button{
         justify-content: center;
     }
     .section__inner {
-        grid-template-columns: 200px auto;
+        grid-template-columns: 180px auto;
     }
     .products__content {
         gap: 30px 16px;
@@ -585,6 +624,37 @@ button{
     }
     .steps__item::before{
         font-size: 20px;
+    }
+    .feedback__item-video{
+        width: 200px;
+    }
+    .feedback__item-img{
+        width: 200px;
+    }
+    .feedback__slider{
+        width: 447px;
+    }
+    .feedback__item-text{
+        font-size: 10px;
+    }
+    .feedback__item-content {
+        padding-bottom: 45px;
+    }
+    .feedback__item-btn {
+        bottom: 1px;
+    }
+    .feedback__item-name {
+        margin-bottom: 10px;
+    }
+    .feedback__content .swiper-pagination {
+        bottom: 90px;
+    }
+    .swiper-pagination-bullet{
+        width: 30px;
+    }
+    .feedback__item-sociallink img{
+        width: 15px;
+        height: 15px;
     }
 }
 
@@ -629,6 +699,12 @@ button{
     }
     .team__item-descr{
         font-size: 7px;
+    }
+    .sertificates__content img {
+        width: 200px;
+    }
+    .sertificates__slider {
+        width: 590px;
     }
 }
 
@@ -739,6 +815,15 @@ button{
     .courses__prise {
         padding: 6px 4px;
         right: -10px;
+    }
+    .feedback__item-btn {
+        right: 40px;
+    }
+    .feedback__item-content{
+        width: 209px;
+    }
+    .feedback__item{
+        gap: 0 5px;
     }
 }
 
@@ -872,6 +957,42 @@ button{
     .team{
         margin-bottom: 50px;
     }
+    .sertificates__slider {
+        width: 415px;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 440px){
+    .feedback__item{
+        grid-template-columns: auto;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .feedback__slider {
+        width: 250px;
+        margin: 0 auto;
+    }
+    .feedback__item-video {
+        width: 250px;
+    }
+    .feedback__item-img {
+        width: 250px;
+        margin: 0 auto 20px;
+    }
+    .feedback__item-btn {
+        bottom: 0;
+        right: 0;
+        margin: 0 auto;
+        left: 0;
+        max-width: 100px;
+    }
+    .feedback__item-content {
+        margin: 0 auto;
+    }
+    .feedback__content .swiper-pagination {
+        bottom: 70px;
+    }
 }
 
 @media(max-width: 420px){
@@ -994,6 +1115,9 @@ button{
         width: 150px;
         bottom: 15px;
         left: 148px;
+    }
+    .sertificates__slider {
+        width: 200px;
     }
 
 }
