@@ -512,9 +512,26 @@ button{
     top: 17px;
 }
 
+/* переварачиваем стрелку вниз при активации акордеона */
+.accordeon__title.accordeon__title--active::after{
+transform: rotate(180deg);
+}
+
 .accordeon__text{
-    display: none;
+    opacity: 0;
+    max-height: 0;
+    /* анимация при активном классе */
+    transition: opacity .3s, max-height .3s;
+}
+
+/* ol дучше обернуть во что то типо div
+это решение на скорую руку что бы падинги вылазили при активном классе */
+.accordeon__text ol{
     padding: 20px 40px;
+}
+
+.accordeon__text.accordeon__text--visible{
+    opacity: 1;
 }
 
 .promo{
