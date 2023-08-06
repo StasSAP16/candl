@@ -32,6 +32,7 @@ ul{
 }
 
 button{
+    color: #272727;
     border: none;
     padding: 0;
     border-radius: 0;
@@ -1125,6 +1126,11 @@ transform: rotate(180deg);
     .steps__list {
         gap: 25px 40px;
     }
+
+    .section--decor::after {
+        left: 26px;
+    }
+
     .team{
         margin-bottom: 50px;
     }
